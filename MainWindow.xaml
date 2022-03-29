@@ -9,6 +9,7 @@
         Width="350"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         SizeToContent="WidthAndHeight"
+        Background="White"
         >
     <Window.Resources>
     </Window.Resources>
@@ -19,17 +20,24 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" 
-
-              >
+        <Grid Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition 
+                    
+                    Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock  Text="Dark Theme"
+                        FontSize="20"
+                        Margin="150 0 0 0 "
+                        />
             <RadioButton x:Name="darkThemeToggle" 
-                Content="Dark Theme" 
-                FontSize="15"
-                Width="130" Height="46" 
+                Content="" 
+                Margin="270 10 0 0 "
+                Height="50" 
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Right"
                 
-                   
                 />
 
         </Grid>
