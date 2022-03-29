@@ -1,0 +1,55 @@
+﻿<Window x:Class="formProj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:formProj" 
+        mc:Ignorable="d"
+        Title="Registration Form" 
+        Width="350"
+        HorizontalAlignment="Center" VerticalAlignment="Center"
+        SizeToContent="WidthAndHeight"
+        >
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" 
+
+              >
+            <RadioButton x:Name="darkThemeToggle" 
+                Content="Dark Theme" 
+                FontSize="15"
+                Width="130" Height="46" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Right"
+                
+                   
+                />
+
+        </Grid>
+        <Grid Grid.Row="1"
+                Margin="0 0 0 0"
+                      >
+        <ContentControl Content="{Binding SelectedViewModel}"/>
+        </Grid>
+        <Grid Grid.Row="2"
+                Margin="0 0 0 0">
+        <Button
+            Margin="0,0,10,10"
+            HorizontalAlignment="Right"
+            Name="switchView"
+            Command="{Binding UpdateView}"
+            CommandParameter="login"
+            Content="{Binding ButtonContent}"
+            Width="125"  
+                    />
+        </Grid>
+    </Grid>
+
+</Window>
