@@ -40,6 +40,7 @@
             <TextBlock  Text="Dark Theme"
                         FontSize="20"
                         Margin="130 0 0 0 "
+                        Foreground="{DynamicResource FontColor}"
                         />
             <CheckBox x:Name="darkThemeToggle" 
                 Content="" 
@@ -60,15 +61,25 @@
         </Grid>
         <Grid Grid.Row="2"
                 Margin="0 0 0 0">
-        <Button
+            <Button
             Margin="0,0,10,10"
             HorizontalAlignment="Right"
             Name="switchView"
             Command="{Binding UpdateView}"
             CommandParameter="login"
             Content="{Binding ButtonContent}"
+            Foreground="{DynamicResource FontColor}"
             Width="125"  
-                    />
+            Background="{DynamicResource ButtonColor}"
+            >
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+                
+            </Button>
         </Grid>
     </Grid>
 
