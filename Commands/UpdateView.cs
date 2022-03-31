@@ -11,10 +11,7 @@ namespace formProj.Commands
     public class UpdateView : ICommand
     {
         private MainViewModel viewModel;
-        private bool visitedLogin = false;
-
-        public UpdateView(MainViewModel viewModel)
-        {
+        public UpdateView(MainViewModel viewModel){
             this.viewModel = viewModel;
         }
 
@@ -28,14 +25,9 @@ namespace formProj.Commands
         public void Execute(object parameter)
         {
             
-            if (!this.visitedLogin && parameter.ToString() == "login")
+            if ( parameter.ToString() == "login")
             {
                 viewModel.SelectedViewModel = new LoginViewModel();
-                this.visitedLogin = true;
-            }
-
-            if (this.visitedLogin){
-
             }
         }
     }

@@ -3,15 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:formProj.Views"
+        xmlns:viewmodels="clr-namespace:formProj.ViewModels"
         xmlns:local="clr-namespace:formProj" 
         mc:Ignorable="d"
         Title="Registration Form" 
         Width="350"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         SizeToContent="WidthAndHeight"
-        Background="White"
+        Background="{DynamicResource PrimaryBackgroundColor}"
         >
     <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:SignUpViewModel}" >
+            <views:SignUpView />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}" >
+            <views:LoginView />
+        </DataTemplate>
+
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -29,15 +39,17 @@
             </Grid.ColumnDefinitions>
             <TextBlock  Text="Dark Theme"
                         FontSize="20"
-                        Margin="150 0 0 0 "
+                        Margin="130 0 0 0 "
                         />
-            <RadioButton x:Name="darkThemeToggle" 
+            <CheckBox x:Name="darkThemeToggle" 
                 Content="" 
-                Margin="270 10 0 0 "
-                Height="50" 
+                Margin="250 10 0 0 "
+                Height="30"
+                Width="50"
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Right"
-                
+                IsChecked="False"
+                Command="{Binding toggleTheme }"
                 />
 
         </Grid>

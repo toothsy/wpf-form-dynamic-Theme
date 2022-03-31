@@ -11,4 +11,8 @@
     <Folder Include="Model\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Haley.WPF" Version="5.2.8" />
+  </ItemGroup>
+
 </Project>

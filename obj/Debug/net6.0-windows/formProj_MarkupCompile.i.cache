@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\AJ\Desktop\INTERNSHIP\formProj\formProj\App.xaml
-31113291466
+6-1364743919
 
-12468753367
-1941905061893
-MainWindow.xaml;Views\LoginView.xaml;Views\SignUpView.xaml;
+141976873824
+205-67894644
+MainWindow.xaml;Styles\MainStyle.xaml;Themes\darktheme.xaml;Themes\LightTheme.xaml;Views\LoginView.xaml;Views\SignUpView.xaml;
 
 True
 
